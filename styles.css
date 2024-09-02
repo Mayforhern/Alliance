@@ -1,0 +1,229 @@
+/* Tailwind base styles */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Custom CSS based on Tailwind config */
+:root {
+  --background: 210 100% 97%;
+  --foreground: 339 20% 20%;
+  --primary: 308 56% 85%;
+  --primary-foreground: 210 22% 22%;
+  --secondary: 196 75% 88%;
+  --secondary-foreground: 210 22% 22%;
+  --accent: 211 86% 70%;
+  --accent-foreground: 210 22% 22%;
+  --destructive: 0 93% 73%;
+  --destructive-foreground: 210 22% 22%;
+  --muted: 210 100% 95%;
+  --muted-foreground: 210 22% 22%;
+  --card: 210 100% 97%;
+  --card-foreground: 210 22% 22%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 341 20% 22%;
+  --border: 210 40% 80%;
+  --input: 210 40% 56%;
+  --ring: 210 40% 60%;
+  --radius: 1rem;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Circular Video */
+.avatar-container {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Make sure width and height are equal for a circle */
+  overflow: hidden; /* Hide the overflow to clip the video */
+  border-radius: 50%; /* Make the container circular */
+  position: relative; 
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-video {
+  width: 100%; /* Fill the container */
+  height: 100%; /* Fill the container */
+  object-fit: cover; /* Cover the container, preserving aspect ratio */
+  position: absolute; /* Position absolute to fit within the container */
+  top: 0;
+  left: 0;
+}
+
+/* Button Styling */
+.btn-hover {
+  background-color: #ecc4ec; /* Default background color */
+  color: #000000; /* Default text color */
+  padding: 10px 20px; /* Adjust padding */
+  border-radius: 8px; /* Rounded corners */
+  border: 2px solid transparent; /* Border to accommodate hover effect */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.875rem; /* Adjust font size as needed */
+}
+
+.btn-hover:hover {
+  background-color: #f85df8; /* Darker background color on hover */
+  border-color: #f85df8; /* Border color matching the background on hover */
+}
+
+/* Gradient Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.background-animation {
+  background: linear-gradient(45deg, #f5aef5, #f8eff8, #fcc0fc);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+}
+/* Add this to your existing CSS file */
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Carousel Wrapper */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px; /* Adjust padding as needed */
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-nav.prev {
+  left: 10px;
+}
+
+.carousel-nav.next {
+  right: 10px;
+}
+/* Splash Screen Styling */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5aef5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#splash-screen h1 {
+  font-family: 'Nerko One', cursive;
+  font-weight: 400;
+  font-size: xxx-large;
+  font-style: normal;
+  color: white;
+  animation: zoomFadeOut 3s ease forwards;
+}
+
+/* Zoom Out and Fade Out Animation */
+@keyframes zoomFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5); /* Makes it appear like it's zooming out */
+  }
+}
+
+.fade-out {
+  animation: zoomFadeOut 3s ease forwards;
+}

@@ -1,0 +1,138 @@
+/* Import Tailwind's base styles */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Custom properties and base styles */
+:root {
+  --background: 210 100% 97%;
+  --foreground: 339 20% 20%;
+  --primary: 308 56% 85%;
+  --primary-foreground: 210 22% 22%;
+  --secondary: 196 75% 88%;
+  --secondary-foreground: 210 22% 22%;
+  --accent: 211 86% 70%;
+  --accent-foreground: 210 22% 22%;
+  --destructive: 0 93% 73%;
+  --destructive-foreground: 210 22% 22%;
+  --muted: 210 100% 95%;
+  --muted-foreground: 210 22% 22%;
+  --card: 210 100% 97%;
+  --card-foreground: 210 22% 22%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 341 20% 22%;
+  --border: 210 40% 80%;
+  --input: 210 40% 56%;
+  --ring: 210 40% 60%;
+  --radius: 1rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Manrope', sans-serif; /* Custom font-family for body */
+  margin: 0; /* Remove default margin */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif; /* Custom font-family for headings */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Manrope', sans-serif;
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.bg-primary-foreground {
+  background-color: hsl(var(--primary-foreground));
+}
+
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
+}
+
+/* Remove border utility class */
+.border-border {
+  border: none; /* No border */
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+
+.text-muted {
+  color: hsl(var(--muted));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Additional utility classes and custom styles as needed */
